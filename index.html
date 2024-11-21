@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestão</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<body>
+    <div>
+        <ul class="menu">
+            <li title="home"><a href="#" class="menu-button home">menu</a></li>
+            <li title="about"><a href="#" class="active about" id="btn_cad_pessoas">about</a></li>
+            <li title="contact"><a href="#" class="contact" id="btn_cad_prod">contact</a></li>
+            <li title="search"><a href="#" class="search" id="btn_pesq_prod">search</a></li>
+            </ul>
+            <ul class="menu-bar">
+            <li><a href="#" class="menu-button">Menu</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#" id="btn_resum">Informações</a></li>
+            <li><a href="#">Sair</a></li>
+        </ul>
+    </div>
+    <div class="pags">
+        <div class="cadastro_pessoas" id="cad_pessoas">
+            <div class="pesquisa_func">
+                <form class="search-container">
+                    <input type="text" id="search-bar" placeholder="Busca Funcionário">
+                    <a href="#"><img class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a>
+                </form>
+            </div>
+        </div>
+        <div class="cadastro_produtos" id="cad_prods">
+            oi2
+        </div>
+        <div class="pesquisa_produtos" id="pesq_prods">
+            oi3
+        </div>
+        <div class="resumo" id="resum">
+            oi4
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+    $(".pags > div").hide();
+
+    $("#btn_cad_pessoas").click(function () {
+        $(".pags > div").hide();
+        $("#cad_pessoas").show();
+    });
+
+    $("#btn_cad_prod").click(function () {
+        $(".pags > div").hide();
+        $("#cad_prods").show();
+    });
+
+    $("#btn_pesq_prod").click(function () {
+        $(".pags > div").hide();
+        $("#pesq_prods").show();
+    });
+
+    $("#btn_resum").click(function () {
+        $(".pags > div").hide();
+        $("#resum").show();
+    });
+    });
+    </script>
+    <script>
+        $(document).ready(function(){
+        $(".menu-button").click(function(){
+        $(".menu-bar").toggleClass( "open" );
+        })
+        })
+    </script>
+</body>
+</html>
